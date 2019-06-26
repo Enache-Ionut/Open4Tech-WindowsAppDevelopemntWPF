@@ -21,16 +21,19 @@ namespace WindowsAppDevelopment
   /// </summary>
   public partial class MainWindow : Window, INotifyPropertyChanged
   {
-    public event PropertyChangedEventHandler PropertyChanged;
-
+    #region Members
 
     private string email;
 
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    #endregion
+
+    #region Properties
 
     public string LoginToUse { get; private set; } = "Login to use Open4tech";
 
     public string Password { get; private set; }
-
 
     public string Email
     {
@@ -43,17 +46,26 @@ namespace WindowsAppDevelopment
         email = value;
 
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Email"));
-
+        
         //if (PropertyChanged != null)
         //  PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Email"));
       }
     }
+
+    #endregion
+
+    #region Public Methods
+
 
     public MainWindow()
     {
       InitializeComponent();
       DataContext = this;
     }
+
+    #endregion
+
+    #region Private Methods
 
     private void LoginButton_Click(object sender, RoutedEventArgs e)
     {
@@ -77,6 +89,8 @@ namespace WindowsAppDevelopment
       }
 
     }
+
+    #endregion
 
   }
 }
