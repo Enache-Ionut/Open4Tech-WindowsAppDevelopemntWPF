@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowsAppDevelopment
+namespace WindowsAppDevelopmentDay2
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
@@ -46,7 +46,7 @@ namespace WindowsAppDevelopment
         email = value;
 
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Email"));
-        
+
         //if (PropertyChanged != null)
         //  PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Email"));
       }
