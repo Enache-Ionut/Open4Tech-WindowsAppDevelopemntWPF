@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsAppDevelopment"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        mc:Ignorable="d" 
+        Title="Open4Tech" 
+        WindowStyle="ToolWindow"
+        Height="450" Width="800">
+
+  <Grid>
+
+    <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="296,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-4.108,-2.229" Text="{Binding Path=LoginToUse, Mode=OneTime}" />
+
+    <Label Content="_Email" FontSize="14" HorizontalAlignment="Left" Margin="163,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.318,0.602" Target="{Binding ElementName=EmailTextBox}"/>
+    <TextBox HorizontalAlignment="Left" FontSize="14" Height="23" Margin="163,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" x:Name="EmailTextBox" Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+    <Label Content="_Password" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.544,7.346" Margin="163,200,0,0" Target="{Binding ElementName=PassordBox}"/>
+    <PasswordBox HorizontalAlignment="Left" FontSize="14" Margin="163,234,0,0" VerticalAlignment="Top" Width="417" x:Name="PassordBox" PasswordChanged="OnPasswordChanged" />
+    
+    <Button x:Name="LoginButton" Content="LogIn" FontSize="16" HorizontalAlignment="Left" Margin="333,289,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click" />
+    <Button x:Name="ForgotPasswordButton" Content="Forgot Password?" FontSize="14" HorizontalAlignment="Left" Margin="314,354,0,0" VerticalAlignment="Top" Width="117" Background="Transparent" BorderThickness="0" Click="ForgotPasswordButton_Click" />
+
+
+
+
+  </Grid>
+
 </Window>
