@@ -1,12 +1,13 @@
-﻿<Window x:Class="WindowsAppDevelopmentDay2.MainWindow"
+﻿<Window x:Class="WindowsAppDevelopmentDay2.Views.LoginView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsAppDevelopmentDay2.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:WindowsAppDevelopmentDay2"
         mc:Ignorable="d"
-        Title="Open4Tech" Height="500" Width="824">
+        Title="LoginView" Height="500" Width="824">
+
 
   <Grid>
     <Grid.RowDefinitions>
@@ -20,7 +21,7 @@
     </Grid.RowDefinitions>
 
     <Grid.Background>
-      <ImageBrush ImageSource="ClangOpen4Tech2019.png" Stretch="UniformToFill" />
+      <ImageBrush ImageSource="../Views/ClangOpen4Tech2019.png" Stretch="UniformToFill" />
     </Grid.Background>
 
     <TextBlock 
@@ -32,7 +33,7 @@
               FontSize="20" 
               Foreground="White"
               TextWrapping="Wrap" 
-              Margin="0 140 0 0"
+              Margin="0 115 0 0"
               Text="Login to use Open4Tech" />
 
     <!--Text="{Binding Path=LoginToUse, Mode=OneTime}"-->
@@ -49,16 +50,15 @@
 
     <TextBox Grid.Row="2"
              FontSize="18"  
-             Margin="0,20,0,0" 
+             Margin="0,40,0,0" 
              TextWrapping="Wrap" 
              VerticalAlignment="Center"
              HorizontalAlignment="Center"
              Width="430"
              Height="40"
-             x:Name="EmailTextBox" 
+             x:Name="Email" 
              BorderBrush="White"
-             Foreground="White"
-             Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+             Foreground="White" >
 
       <materialDesign:HintAssist.Hint>
         <TextBlock Foreground="White">Email</TextBlock>
@@ -84,7 +84,8 @@
                  x:Name="PassordBox" 
                  BorderBrush="White"
                  Foreground="White"
-                 PasswordChanged="OnPasswordChanged" >
+                 >
+      <!--PasswordChanged="OnPasswordChanged"-->
 
       <materialDesign:HintAssist.Hint>
         <TextBlock Foreground="White">Password</TextBlock>
@@ -92,7 +93,7 @@
 
     </PasswordBox>
 
-    <Button Grid.Row="5" x:Name="LoginButton" 
+    <Button Grid.Row="5" x:Name="Login" 
             Content="LOG IN" 
             FontSize="18" 
             FontWeight="Bold"
@@ -101,9 +102,11 @@
             HorizontalAlignment="Center"
             Width="170"
             Height="40"
-            Click="LoginButton_Click" />
+            />
+    <!--Click="LoginButton_Click"-->
 
-    <Button Grid.Row="6" x:Name="ForgotPasswordButton" 
+
+    <Button Grid.Row="6" x:Name="ForgotPassword" 
             Content="Forgot Password?" 
             FontSize="15" 
             VerticalAlignment="Center"
@@ -113,8 +116,9 @@
             Background="Transparent" 
             Foreground="Black"
             BorderThickness="0" 
-            Click="ForgotPasswordButton_Click" />
+            />
+    <!--Click="ForgotPasswordButton_Click"-->
 
   </Grid>
-
+  
 </Window>

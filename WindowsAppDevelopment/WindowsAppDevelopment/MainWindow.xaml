@@ -11,6 +11,10 @@
 
   <Grid>
 
+    <!--<Grid.Background>
+      <ImageBrush ImageSource="ClangOpen4Tech2019.png" Stretch="UniformToFill" />
+    </Grid.Background>-->
+
     <TextBlock HorizontalAlignment="Left" 
                FontSize="16" 
                Margin="296,69,0,0" 
