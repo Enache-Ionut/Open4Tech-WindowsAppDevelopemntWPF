@@ -20,7 +20,9 @@
                Margin="296,69,0,0" 
                TextWrapping="Wrap" 
                VerticalAlignment="Top" 
-               Text="{Binding Path=LoginToUse, Mode=OneTime}" />
+               Text="Login to use Open4Tech"/>
+    
+    <!--Text="{Binding Path=LoginToUse, Mode=OneTime}"-->
 
     <Label Content="_Email" 
            FontSize="14" 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,10 +71,10 @@ namespace WindowsAppDevelopment
     private void LoginButton_Click(object sender, RoutedEventArgs e)
     {
       MessageBox.Show("Login");
+      Process.Start(new ProcessStartInfo("https://www.google.com/"));
 
-      Email = string.Empty;
-
-      //this.Close();
+      //  Email = string.Empty;
+      //  //this.Close();
     }
 
     private void ForgotPasswordButton_Click(object sender, RoutedEventArgs e)
