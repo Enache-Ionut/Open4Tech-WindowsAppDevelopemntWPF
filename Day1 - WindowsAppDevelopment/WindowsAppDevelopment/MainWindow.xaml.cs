@@ -73,7 +73,6 @@ namespace WindowsAppDevelopment
       {
         Password = ((PasswordBox)sender).Password;
       }
-
     }
 
     #endregion
