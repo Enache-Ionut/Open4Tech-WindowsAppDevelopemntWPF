@@ -82,11 +82,36 @@
             FontSize="15" 
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
-            Margin="0 0 0 0" 
-            Width="160" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Width="120" 
             Background="Transparent" 
             Foreground="Black"
-            BorderThickness="0"/>
+            BorderThickness="0">
+
+      <Button.Template>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Border>
+            <Grid>
+              <ContentPresenter />
+              <Grid
+                x:Name="StatusPanel"
+                Background="Black"
+                Opacity="0" />
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+              <Setter TargetName="StatusPanel" Property="Opacity" Value="0.1" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+              <Setter TargetName="StatusPanel" Property="Opacity" Value="0.3" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Button.Template>
+
+    </Button>
 
   </Grid>
   
