@@ -20,10 +20,6 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <!--<Grid.Background>
-      <ImageBrush ImageSource="ClangOpen4Tech2019.png" Stretch="UniformToFill" />
-    </Grid.Background>-->
-
     <TextBlock 
               Grid.Row="0"
               HorizontalAlignment="Center" 
@@ -34,8 +30,7 @@
               TextWrapping="Wrap" 
               Margin="0 100 0 0"
               Text="Login to use Open4Tech" />
-
-    <!--Text="{Binding Path=LoginToUse, Mode=OneTime}"-->
+    <!-- OneTime binding: Text="{Binding Path=LoginToUse, Mode=OneTime}"-->
 
     <Label 
            Grid.Row="1"
@@ -70,24 +65,20 @@
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Width="430"
-                 Height="30" />
-    <!--PasswordChanged="OnPasswordChanged"-->
+                 Height="30"
+                 PasswordChanged="OnPasswordChanged"/>
 
-
-
-    <Button Grid.Row="5" x:Name="Login" 
+    <Button Grid.Row="5" x:Name="LoginButton" 
             Content="LOG IN" 
             FontSize="18" 
             Margin="0 40 0 0" 
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Width="170"
-            Height="40"
-            />
-    <!--Click="LoginButton_Click"-->
+            Height="40" 
+            Click="LoginButton_Click" />
 
-
-    <Button Grid.Row="6" x:Name="ForgotPassword" 
+    <Button Grid.Row="6" x:Name="ForgotPasswordButton" 
             Content="Forgot Password?" 
             FontSize="15" 
             VerticalAlignment="Center"
@@ -96,8 +87,8 @@
             Width="160" 
             Background="Transparent" 
             Foreground="Black"
-            BorderThickness="0" />
-    <!--Click="ForgotPasswordButton_Click"-->
+            BorderThickness="0" 
+            Click="ForgotPasswordButton_Click" />
 
   </Grid>
 
