@@ -1,33 +1,40 @@
 ﻿using Caliburn.Micro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using WindowsAppDevelopmentDay2.Models;
 
 namespace WindowsAppDevelopmentDay2.ViewModels
 {
   public class LoginViewModel : Screen
   {
-    private string email;
+    #region Members
+
+    private UserModel userModel = new UserModel();
+
+    #endregion
+
+    #region Properties
 
     public string Email
     {
       get
       {
-        return email;
+        return userModel.Email;
       }
       set
       {
-        email = value;
+        userModel.Email = value;
         NotifyOfPropertyChange(() => Email);
       }
     }
 
+    #endregion
+
+    #region Public Methods
+
     public void Login()
     {
-      MessageBox.Show("Login");
+      MessageBox.Show("Log In");
+      // Process.Start(new ProcessStartInfo("https://www.google.com/"));
     }
 
     public void ForgotPassword()
@@ -35,5 +42,8 @@ namespace WindowsAppDevelopmentDay2.ViewModels
       MessageBox.Show("Forgot Password");
     }
 
+    #endregion
+
   }
 }
+
