@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WindowsAppDevelopment
 {
@@ -46,17 +34,17 @@ namespace WindowsAppDevelopment
       {
         email = value;
 
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Email"));
-        
         //if (PropertyChanged != null)
         //  PropertyChanged.Invoke(this, new PropertyChangedEventArgs("Email"));
+
+        // This line is equivalent with the if statment from above
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Email"));
       }
     }
 
     #endregion
 
     #region Public Methods
-
 
     public MainWindow()
     {
@@ -72,9 +60,6 @@ namespace WindowsAppDevelopment
     {
       MessageBox.Show("Login");
       Process.Start(new ProcessStartInfo("https://www.google.com/"));
-
-      //  Email = string.Empty;
-      //  //this.Close();
     }
 
     private void ForgotPasswordButton_Click(object sender, RoutedEventArgs e)

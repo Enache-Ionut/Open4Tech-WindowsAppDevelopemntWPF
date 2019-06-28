@@ -20,20 +20,18 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <TextBlock 
-              Grid.Row="0"
-              HorizontalAlignment="Center" 
-              VerticalAlignment="Center" 
-              Height="30" Width="250"
-              TextAlignment="Center"
-              FontSize="20"
-              TextWrapping="Wrap" 
-              Margin="0 100 0 0"
-              Text="Login to use Open4Tech" />
+    <TextBlock Grid.Row="0"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Height="30" Width="250"
+               TextAlignment="Center"
+               FontSize="20"
+               TextWrapping="Wrap" 
+               Margin="0 100 0 0"
+               Text="Login to use Open4Tech" />
     <!-- OneTime binding: Text="{Binding Path=LoginToUse, Mode=OneTime}"-->
 
-    <Label 
-           Grid.Row="1"
+    <Label Grid.Row="1"
            Content="_Email" 
            FontSize="16" 
            HorizontalAlignment="Left"
@@ -42,6 +40,7 @@
            Target="{Binding ElementName=EmailTextBox}"/>
 
     <TextBox Grid.Row="2"
+             x:Name="EmailTextBox"
              FontSize="18"  
              Margin="0,0,0,0" 
              TextWrapping="Wrap" 
@@ -49,9 +48,10 @@
              HorizontalAlignment="Center"
              Width="430"
              Height="30"
-             x:Name="EmailTextBox" />
+             Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-    <Label Grid.Row="3" Content="_Password" 
+    <Label Grid.Row="3" 
+           Content="_Password" 
            FontSize="16" 
            VerticalAlignment="Center" 
            HorizontalAlignment="Left" 
@@ -68,7 +68,8 @@
                  Height="30"
                  PasswordChanged="OnPasswordChanged"/>
 
-    <Button Grid.Row="5" x:Name="LoginButton" 
+    <Button Grid.Row="5" 
+            x:Name="LoginButton" 
             Content="LOG IN" 
             FontSize="18" 
             Margin="0 40 0 0" 
@@ -78,7 +79,8 @@
             Height="40" 
             Click="LoginButton_Click" />
 
-    <Button Grid.Row="6" x:Name="ForgotPasswordButton" 
+    <Button Grid.Row="6" 
+            x:Name="ForgotPasswordButton" 
             Content="Forgot Password?" 
             FontSize="15" 
             VerticalAlignment="Center"
